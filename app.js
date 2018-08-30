@@ -3,10 +3,13 @@ function loadDataAjax(){
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             var data = JSON.parse(this.responseText);
+            var weatherElement = document.getElementById("weather")
+            weatherElement.innerHTML = "";
                 data.data.text.forEach(element => {
                 var node = document.createElement("li");
-                node.innerText = element;
-                document.getElementById("weather").appendChild(node)
+                node.innerText = element;               
+                weatherElement.appendChild(node)
+                
             });
         }
     };
