@@ -9,8 +9,15 @@
 </head>
 <body>
     <div>
-    <button type ="button" onclick = "loadDataAjax()">Get Forcast</button>
+    <form action="/action_page.php">
+        Latitue: <input type="text" name="input1" id=#in1><br>
+        Longitude: <input type="text" name="input2" id=#in2><br>
+        <div>
+            <button type ="button" onclick = "loadDataAjax()">Get Forecast</button>
         </div>
+    </form>
+    </div>
+    
         <ul id ="weather"></ul>   
 </body>
 </html>
